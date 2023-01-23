@@ -24,7 +24,7 @@ body{
     grid-template-columns: 1fr;
     gap: 4px;
     grid-template-rows: 2fr 1fr;
-
+    position: relative;
 }
 
 .top-left-container{
@@ -72,11 +72,8 @@ header h1{
     color: black;
     padding: 20px;
     font-size: 18px;
-
     width: 250px;
-    max-width: 65%;
-    /* transform: translate(900px, 0); */
-    transition: transform 3s ease;
+    transition: all .3s ease;
 }
 
 main.open{
