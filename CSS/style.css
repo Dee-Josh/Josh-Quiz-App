@@ -65,24 +65,22 @@ header h1{
     display: none;
     position: absolute;
     top: 60px;
-    right: -300px;
+    right: 0;
     height: calc(100vh - 60px);
-    width: 180px;
 
     background-color: pink;
     color: black;
-    padding: 10px;
+    padding: 20px;
     font-size: 18px;
 
-    max-width: 200px;
-    width: 70%;
-    transform: translate(300px, 0);
+    max-width: 250px;
+    width: 65%;
+    transform: translate(900px, 0);
     transition: transform 0.3s ease;
 }
 
 main.open{
     transform: translate(0, 0);
-    right: 0;
 }
 
 main ul{
