@@ -15,7 +15,7 @@ body{
      gap: 4px;
     background-color: rgb(162, 162, 253);
     color: white;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .left-container{
@@ -65,7 +65,7 @@ header h1{
     display: none;
     position: absolute;
     top: 60px;
-    right: 0;
+    right: -300px;
     height: calc(100vh - 60px);
     width: 180px;
 
@@ -82,6 +82,7 @@ header h1{
 
 main.open{
     transform: translate(0, 0);
+    right: 0;
 }
 
 main ul{
