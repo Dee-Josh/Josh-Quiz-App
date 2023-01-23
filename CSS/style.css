@@ -15,7 +15,7 @@ body{
      gap: 4px;
     background-color: rgb(162, 162, 253);
     color: white;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .left-container{
