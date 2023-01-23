@@ -375,6 +375,22 @@ body{
         top: 28vh;
         right: 26px;
     } */
+
+
+
+
+
+    .options:hover .left,
+    .options:hover .right,
+    .options:hover .middle{
+        background-color: white;
+        color: var(--black-color);
+        cursor: pointer;
+    }
+
+
+
+
 }
 
 

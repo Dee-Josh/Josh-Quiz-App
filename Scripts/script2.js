@@ -5,7 +5,7 @@ const allUsers = JSON.parse(localStorage.getItem("users"));
 
 const userName = document.querySelector(".username");
 const time = document.querySelector(".time");
-let miniutes = 1;
+let miniutes = 5;
 let seconds = 00;
 
 // Question & Options
@@ -188,7 +188,7 @@ function moveToNext() {
 
             options[i].querySelector(".left").setAttribute("hover", false)
             options[i].querySelector(".middle").setAttribute("hover", false)
-            options[i].querySelector(".right").setAttribute("hover", false)
+            console.log(options[i].querySelector(".right").getAttribute("hover")); 
         }
 
         currentQuestion++;
