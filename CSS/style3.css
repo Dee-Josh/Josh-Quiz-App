@@ -27,6 +27,7 @@ body{
     position: relative;
 
     display: flex;
+    overflow: hidden;
     
 }
 
@@ -90,6 +91,10 @@ body{
     margin-bottom: 15px;
 }
 
+#categories{
+    margin-bottom: 10px;
+}
+
 .bottom-container .check{
     border-radius: 100px;
 }
@@ -105,4 +110,32 @@ body{
     background-color: var(--main-color);
     color: var(--white-color);
     font-style: 18px;
+}
+
+@media screen and (max-width: 880px) {
+
+    .bottom-container .container{
+        width: 90%;
+    }
+    
+
+    .main-input .input{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 650px){
+    body{
+        flex-direction: column;
+    }
+
+    .top-container{
+        width: 100%;
+        height: 40vh;
+    }
+
+    .bottom-container{
+        width: 100%;
+        height: 60vh;
+    }
 }

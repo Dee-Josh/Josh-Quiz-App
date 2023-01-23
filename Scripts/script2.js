@@ -5,7 +5,7 @@ const allUsers = JSON.parse(localStorage.getItem("users"));
 
 const userName = document.querySelector(".username");
 const time = document.querySelector(".time");
-let miniutes = 10;
+let miniutes = 1;
 let seconds = 00;
 
 // Question & Options
@@ -30,6 +30,10 @@ let scorePlus = document.querySelector(".score-plus");
 let scoreMinus = document.querySelector(".score-minus");
 let middleDisplay = document.querySelector(".score-dis");
 
+let scoreContent = document.querySelector(".score");
+
+scoreContent.textContent = scores;
+
 
 
 // To know which user logged in and display the user's name
@@ -43,6 +47,8 @@ for (let i = 0; i < allUsers.length; i++) {
 
 userName.textContent = login_details.username;
 
+// TIME EDITING
+
 setInterval(()=>{
     if (seconds < 10) {
         let second = "0" + seconds;
@@ -54,6 +60,10 @@ setInterval(()=>{
     }
     time.textContent = miniutes + ":" + seconds
     seconds--;
+
+    if (miniutes == '-1') {
+        alert("Time up. Click 'OK' to view score dashboard")
+    }
 }, 1000);
 
 
@@ -175,6 +185,10 @@ function moveToNext() {
             options[i].querySelector(".left").classList.remove('wrong');
             options[i].querySelector(".middle").classList.remove('wrong');
             options[i].querySelector(".right").classList.remove('wrong');
+
+            options[i].querySelector(".left").setAttribute("hover", false)
+            options[i].querySelector(".middle").setAttribute("hover", false)
+            options[i].querySelector(".right").setAttribute("hover", false)
         }
 
         currentQuestion++;
@@ -190,15 +204,14 @@ function moveToNext() {
         scoreMinus.classList.add("hidden");
         middleDisplay.classList.remove("to-top");
         middleDisplay.classList.add("back-to-norm");
+        // middleDisplay.classList.remove("no-trans");
     }
    moved = true;
 }
 
 nxtBtn.addEventListener("click", ()=>{
     moveToNext();
-    if (!currentQuestion >= 9) {
-        moveToNext();
-    }
+    
 })
 
 
@@ -236,10 +249,9 @@ options.forEach((option)=>{
 
                 scorePlus.classList.remove("hidden");
                 middleDisplay.classList.add("to-top");
-
                 // setTimeout(()=>{
-                //     moveToNext();
-                // },1500)
+                //     middleDisplay.classList.add("no-trans");
+                // },1000);
             }else{
                 option.querySelector(".left").classList.add("wrong");
                 option.querySelector(".middle").classList.add("wrong");
@@ -253,13 +265,22 @@ options.forEach((option)=>{
 
                 scoreMinus.classList.remove("hidden");
                 middleDisplay.classList.add("to-top");
+                // setTimeout(()=>{
+                //     middleDisplay.classList.add("no-trans");
+                // },1000);
 
                 scores -= 100;
 
-                // setTimeout(()=>{
-                //     moveToNext();
-                // },1500);
+            }
 
+            setTimeout(()=>{
+                if (!currentQuestion <= 9) {
+                    moveToNext();
+                }
+            },1500);
+
+            if (scores < 0) {
+                scores = 0;
             }
         }
 
@@ -270,8 +291,6 @@ options.forEach((option)=>{
                 alert("You score is " + scores + " points")
             })
         }
+        scoreContent.textContent = scores;
     })
 })
-
-
- 

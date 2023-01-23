@@ -39,6 +39,7 @@ header h1{
 
 .fa-bars{
     display: none;
+    font-size: 20px;
 }
 
 .display-container{
@@ -357,6 +358,7 @@ marquee{
 
     .fa-bars{
         display: initial;
+        /* margin-top: 20px; */
     }
 
     .top-left-container{
