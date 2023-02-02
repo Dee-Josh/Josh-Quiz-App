@@ -185,6 +185,16 @@ body{
     color: var(--white-color);
 }
 
+.circle-count{
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    border: 2px solid blue;
+    background-color: pink;
+    text-align: center;
+    margin: auto;
+}
+
 .logout{
     display: flex;
     justify-content: flex-end;

@@ -103,57 +103,57 @@ const questions = [
     },
     {
         number: 4,
-        question: "What is full meaning of WHO",
-        optionA: "World Human Organisation",
-        optionB: "West Health Organisation",
-        optionC: "World Health Organisation",
-        optionD: "Wise Human Organisation",
-        answer: "C"
+        question: "At what age did Adam die in the Bible",
+        optionA: "900",
+        optionB: "309",
+        optionC: "911",
+        optionD: "930",
+        answer: "D"
     },
     {
         number: 5,
-        question: "What is full meaning of WHO",
-        optionA: "World Human Organisation",
-        optionB: "West Health Organisation",
-        optionC: "World Health Organisation",
-        optionD: "Wise Human Organisation",
-        answer: "C"
+        question: "Which disney character left a glass shoe in front the palace",
+        optionA: "Snow White",
+        optionB: "Cinderella",
+        optionC: "Sleeping Beauty",
+        optionD: "Elsa",
+        answer: "B"
     },
     {
         number: 6,
-        question: "What is full meaning of WHO",
-        optionA: "World Human Organisation",
-        optionB: "West Health Organisation",
-        optionC: "World Health Organisation",
-        optionD: "Wise Human Organisation",
-        answer: "C"
+        question: "What does the word laquacious mean?",
+        optionA: "Angry",
+        optionB: "Chatty",
+        optionC: "Beautiful",
+        optionD: "Shy",
+        answer: "B"
     },
     {
         number: 7,
-        question: "What is full meaning of WHO",
-        optionA: "World Human Organisation",
-        optionB: "West Health Organisation",
-        optionC: "World Health Organisation",
-        optionD: "Wise Human Organisation",
-        answer: "C"
+        question: "In 1718, which pirate died in battle coast of what is now North Carolina",
+        optionA: "Blackbeard",
+        optionB: "Calico Jack",
+        optionC: "Captain Kidd",
+        optionD: "Bartholomew Rob",
+        answer: "A"
     },
     {
         number: 8,
-        question: "What is full meaning of WHO",
-        optionA: "World Human Organisation",
-        optionB: "West Health Organisation",
-        optionC: "World Health Organisation",
-        optionD: "Wise Human Organisation",
-        answer: "C"
+        question: "In UK, the abbreviation NHS stands for National _____ Service?",
+        optionA: "Humanity",
+        optionB: "Health",
+        optionC: "Honour",
+        optionD: "Household",
+        answer: "B"
     },
     {
         number: 9,
-        question: "What is full meaning of WHO",
-        optionA: "World Human Organisation",
-        optionB: "West Health Organisation",
-        optionC: "World Health Organisation",
-        optionD: "Wise Human Organisation",
-        answer: "C"
+        question: "Which of the following is correctly spelt",
+        optionA: "Comitment",
+        optionB: "Comittment",
+        optionC: "Committment",
+        optionD: "Commitment",
+        answer: "D"
     },
     {
         number: 10,
@@ -288,7 +288,10 @@ options.forEach((option)=>{
             nxtBtn.textContent = "Finish";
         
             nxtBtn.addEventListener('click', ()=>{
-                alert("You score is " + scores + " points")
+                // alert("You score is " + scores + " points");
+
+                window.confirm("You score is " + scores + " points");
+                window.location = "index.html"
             })
         }
         scoreContent.textContent = scores;
