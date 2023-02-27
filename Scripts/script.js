@@ -1,9 +1,9 @@
 // DOM IMPLEMENTATION
 
 // Buttons
-const aboutBtn = document.querySelector(".about");
-const programBtn = document.querySelector(".program");
-const contactBtn = document.querySelector(".contact-us");
+const aboutBtn = document.querySelector(".right-container nav ul .about");
+const programBtn = document.querySelector(".right-container nav ul .program");
+const contactBtn = document.querySelector(".right-container nav ul .contact-us");
 const centerBtn = document.querySelector(".center button");
 const closeDetails = document.querySelectorAll(".fa-circle-chevron-up");
 
@@ -20,7 +20,7 @@ let isOpen = true;
 // EXTRA DETAILS DISPLAY
 
 function displayExtra(container){
-    hideAll();
+    hideAll(); 
     if(isOpen === true){
         extraText.classList.add("show-details");
         container.classList.remove("hidden");

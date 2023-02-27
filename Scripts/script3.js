@@ -37,6 +37,13 @@ function checkUserData(e) {
             username: form.username.value,
             password: form.password.value
         }
+        console.log(users);
+
+        if (users === null) {
+            alert("Account not registered. Click on sign up to register.")
+        }
+
+        localStorage.setItem("category", JSON.stringify(form.categories.value))
 
         for (let i = 0; i < users.length; i++) {
             if(user.username === users[i].username && user.password === users[i].password){

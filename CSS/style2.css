@@ -85,7 +85,7 @@ body{
 }
 
 .question-text{
-    height: 80px;
+    height: 75px;
     font-size: 20px;
     font-weight: bold;
     /* border: 2px solid var(--grey-color); */
@@ -186,13 +186,28 @@ body{
 }
 
 .circle-count{
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 60px;
     border: 2px solid blue;
     background-color: pink;
     text-align: center;
     margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-count:hover{
+    cursor: pointer;
+}
+
+.fa-xmark{
+    color: red;
+}
+
+.fa-check{
+    color: green;
 }
 
 .logout{
